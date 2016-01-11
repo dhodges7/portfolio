@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=stylesheet href="index.css" type="text/css">
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript">
+            
+            var text = "Curated News, How You Want It.";
+            var count = 0;
+            var maxspeed = 200;
+            
+            $(document).ready(function() {
+                
+                function character(start, end, text) {
+                    return text.substring(start, end);
+                }
+                
+                function type() {
+                    var random = Math.floor(Math.random() * maxspeed);
+                    setTimeout(type, random);
+                    $('#box').append(character(count, count+1, text));
+                    count++;
+                }
+
+                type()
+                
+            });
+        </script>
+        <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,700,600' rel='stylesheet' type='text/css'>
+        <title>News Brief</title>
+        <link rel="shortcut icon" href="Images/Logo.ico">
+    </head>
+    <body>
+        <nav class="global-nav">
+            <!--Fixed navigation bar content-->
+            <div class="logo">
+                <img src="Images/Logo.svg" alt"home" style="width:auto;height:80px">
+            </div>
+            <div class="pagetitle">
+                <h1>News Brief</h1>
+            </div>
+            <div class="form">
+                <!--<form>
+                    <input type="text" name="email" placeholder="please enter your email">
+                </form>-->
+                <img id="apple" src="Screens/App-Store-Logo.png" alt"home" style="width:150px;height:50.775px">
+                <img id="google" src="Screens/Play-Store-Logo.png" alt"home" style="width:150px;height:50.775px">
+            </div>
+        </nav>
+        <div class="container">
+            <div class="top">
+                    <img src="Images/Scenery.jpg" alt="Mountain View" style="width:100%;height:200px;opacity:.5">
+                    <!--<h2>Curated News, How You Want It.</h2>-->
+                    <div id="box" text=""></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="section1">
+                <!--<img src="Images/Audio.jpg" alt="Audio" style="width:auto;height:400px">-->
+                <h3>Audio</h3>
+                <div class="p1">
+                    <p>Listen to the stories you want, in the order you want, whenever you want. With variable speed, playlist creation and closed captioning.</p>
+                </div>
+                <div class="img1">
+                    <img src="Screens/APS.png" alt"home" style="width:auto;height:300px">
+                    <img src="Screens/APL.png" alt"home" style="width:auto;height:300px">
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="section2">
+                <!--<img src="Images/Books.jpg" alt="Books" style="width:auto;height:400px">-->
+                <h3>Top 10 & Categories</h3>
+                <div class="img2">
+                    <img src="Screens/Top10.png" alt"home" style="width:auto;height:300px">
+                    <img src="Screens/Description.png" alt"home" style="width:auto;height:300px">
+                </div>
+                <p>View current top headlines category by category in seconds. Then, select a headline if you want more information.</p>   
+            </div>
+            <div class="spacer"></div>
+            <div class="section3">
+                <!--<img src="Images/Map.jpg" alt="Map" style="width:auto;height:400px">-->
+                <h3>Search</h3>
+                <p>Search by topic, source, location, author... whatever you can think of.</p>
+            <img src="Screens/Search.png" alt"home" style="width:auto;height:300px">    
+            </div>
+            <div class="spacer"></div>
+            <div class="section4">
+                <!--<img src="Images/Bookshelf.jpg" alt="Books" style="width:auto;height:400px">-->
+                <h3>RSS Aggregator</h3>
+                <img src="Screens/RSS.png" alt"home" style="width:auto;height:300px">
+                <p>Personalize your news feed. Create audio playlists based on your customized sources, categories, and topics.</p>    
+            </div>
+            <div class="spacer"></div>
+            <div class="footer">
+                <ul>
+                    <li><a href="url">About</a></li>
+                    <li><a href="url">Support</a></li>
+                    <li><a href="url">Contact</a></li>
+                </ul>
+                <p>&copy; 2015</p>
+            </div>
+        </div>    
+    </body>
+</html>
